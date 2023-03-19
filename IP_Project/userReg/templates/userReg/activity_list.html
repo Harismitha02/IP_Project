@@ -1,0 +1,23 @@
+{% extends "userReg/base.html" %}
+{% block content %}
+    <h1>User Activity</h1>
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <th>User</th>
+                <br><br>
+                <th>Activity</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for activity in activities %}
+                <tr>
+                    <td>{{ activity.user }}</td>
+                    <td>{{ activity.activity }}</td>
+                    <td>{{ activity.timestamp }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
